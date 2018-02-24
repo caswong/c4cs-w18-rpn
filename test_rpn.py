@@ -20,3 +20,21 @@ class TestBasics(unittest.TestCase):
 	def test_divide(self):
 		result = rpn.calculate('9 3 /')
 		self.assertEqual(3, result)
+	def test_exp(self):
+		result = rpn.calculate('5 2 ^')
+		self.assertEqual(25, result)
+	def test_intdiv(self):
+		result = rpn.calculate('10 3 .')
+		self.assertEqual(3, result)
+	def test_percent(self):
+		result = rpn.calculate('75 %')
+		self.assertEqual(0.75, result)
+	def test_and(self):
+		result = rpn.calculate('1 0 &')
+		self.assertEqual(0, result)
+	def test_or(self):
+		result = rpn.calculate('1 0 |')
+		self.assertEqual(1, result)
+	def test_not(self):
+		result = rpn.calculate('0 ~')
+		self.assertEqual(1, result)
