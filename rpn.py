@@ -9,6 +9,9 @@ operators = {
 	'/': operator.truediv,
 	'^': operator.pow,
 	'.': operator.floordiv,
+	'&': operator.and_,
+	'|': operator.or_,
+	'~': operator.not_,
 }
 
 def calculate(arg):
@@ -24,6 +27,9 @@ def calculate(arg):
 				arg = stack.pop()
 				if token == '%':
 					result = arg / 100.
+				else:
+					function = operators[token]
+					result = function(arg)
 			else:
 				function = operators[token]
 				arg2 = stack.pop()
