@@ -38,3 +38,6 @@ class TestBasics(unittest.TestCase):
 	def test_not(self):
 		result = rpn.calculate('0 ~')
 		self.assertEqual(1, result)
+	def test_factorial(self):
+		result = rpn.calculate('4 !')
+		self.assertEqual(24, result)

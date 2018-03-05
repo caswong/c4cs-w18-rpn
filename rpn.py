@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import operator
+import math
 
 operators = {
 	'+': operator.add,
@@ -12,6 +13,7 @@ operators = {
 	'&': operator.and_,
 	'|': operator.or_,
 	'~': operator.not_,
+	'!': math.factorial,
 }
 
 def calculate(arg):
